@@ -1,0 +1,25 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  #chartdiv {
+    width: 100%;
+    height: 500px;
+  }
+
+.material-flow {
+    width: 100%;
+    height: auto;
+}
+.material-flow-chart, #imageMaterialFlow {
+    width: 100%;
+    height: 90vh;
+}
+
+.expand-btn button {
+    width: 110px !important;
+}
+@media screen and (max-width: 750px) {
+    .material-flow-chart, #imageMaterialFlow {
+        height: auto !important;
+    }
+}

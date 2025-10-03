@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Satma CE | Mumbai</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="assets\images\favicon.ico">
+
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css">
+    <script defer src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+
+    <script defer src="//cdn.amcharts.com/lib/4/core.js"></script>
+    <script defer src="//cdn.amcharts.com/lib/4/charts.js"></script>
+    <script defer src="//cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script defer src="//cdn.amcharts.com/lib/4/themes/material.js"></script>
+    <script defer src="//cdn.amcharts.com/lib/4/themes/dark.js"></script>
+    <script defer src="//cdn.amcharts.com/lib/4/themes/kelly.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/flow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <script defer src="./assets/js/map.js"></script>
+    <script defer src="./assets/js/chart.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/2d40bf0dbe.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <div class="nav-item">
+            <img src="assets\images\logo.png" alt="Logo">
+        </div>
+
+        <div class="satma-nav">
+            
+                <div class="nav-button">
+                    Traceability & Impact Report
+                    <img src="assets\images\vartullogo.png" alt="Plastic Bags">
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="website-container">
+        <div class="main-container">
+            <div class="first">
+                <div class="product-info-container">
+                    <div class="product-img">
+                        <div class="product-info1">
+                            <div class="product-title">
+                                <span id="pt-title">LDPE Strechwrap Milky White (25%) PCR</span><span id="pt-company"></span>
+                            </div>
+                            <div class="product-desc-img">
+                                <p id="pt-description"> 
+                                    <img src="assets\images\product-icon2.svg" alt="" id="product-icon1"> Item code :
+                                    <span id="pt-bg">20147791
+                                    </span> <br>
+                                    <img src="assets\images\product-icon3.svg" alt="" id="product-icon1"> HSN code :
+                                    <span id="pt-bg">39232100
+                                    </span>
+                                </p>
+                                <img src="assets\images\StretchMilky25.jpeg" alt="Plastic Bags" id="imageBags">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-report-container mobile-stats-report1">
+                        <div class="mf-name">
+                            <p>Impact Numbers</p>
+                        </div>
+    
+                        <div class="stats-report">
+                            <div class="stats-card">
+                                <div class="stats-number">
+                                    <p><b>~</b> 744 Kgs</p>
+                                </div>
+                                <div class="stats-title">
+                                    <p>Carbon Saved<span>*</span></p>
+                                    <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                                </div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stats-number">
+                                    <p><b>~</b>  6,000 liters</p>
+                                </div>
+                                <div class="stats-title">
+                                    <p>Water saved vs. virgin equivalent<span>*</span></p>
+                                    <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="stats-report">
+                            <div class="stats-card">
+                                <div class="stats-number">
+                                    <p> 600 Kgs</p>
+                                </div>
+                                <div class="stats-title">
+                                    <p>Virgin Plastic Saved</p>
+                                    <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                                </div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stats-number">
+                                    <p>660 Kgs</p>
+                                </div>
+                                <div class="stats-title">
+                                    <p>Total Plastic Waste Used<span>*</span></p>
+                                    <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="stats-report1">
+                            <div class="stats-card1">
+                                <div class="stats-number1">
+                                    <p> 5,836 kWh</p>
+                                </div>
+                                <div class="stats-title1">
+                                    <p>Electricity saved vs. virgin equivalent<span>*</span></p>
+                                    <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="company-info1">
+                            <p>Billed To<b> <br>
+                            Tattva Enterprise Limited
+                            </b> </p>
+                        </div>
+                        
+                        <div class="product-info2">
+                            <div class="company-info">
+                                <p>Invoice Number <b> <br> TGJ250653</b> </p>
+                            </div>
+                            <div class="company-info">
+                                <p>Invoice Date &nbsp;&nbsp;<b> May 11, 2025</b> </p>
+                            </div>
+                        </div>
+                        
+                        <div class="product-info2">
+                            <div class="company-info">
+                                <p>Total Quantity<b> <br> 2,000 KGs</b> </p>
+                            </div>
+                            <div class="company-info">
+                                <p>Remarks <b> <br> 25% pcr used</b> </p>
+                            </div>
+                        </div>
+                        <div class="company-info1">
+                            <p>Certification<b> <br> GRS 4.2</b> </p>
+                        </div>
+
+                        </div>
+                </div>
+
+                <div class="material-flow material-chart1">
+                    <div class="mf-name expand-btn">
+                        <p>Material Flow</p>
+                        <a href="./flow.html"><button type="button"><img src="./assets/images/Vector.png" alt="Expand Icon">Expand view</button></a>
+                    </div>
+                    <div class="material-flow-chart">
+                        <div id="chartdiv"></div>
+                        
+                        <img src="./assets/images/material-flow-chart.png" id="imageMaterialFlow" alt="Material Flow Chart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="middle">
+                <div class="stats-report-container mobile-stats-report2">
+                    <div class="mf-name">
+                        <p>Impact Numbers</p>
+                    </div>
+
+                    <div class="stats-report">
+                        <div class="stats-card">
+                            <div class="stats-number">
+                                <p> 744 Kgs</p>
+                            </div>
+                            <div class="stats-title">
+                                <p>Carbon Saved<span>*</span></p>
+                                <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                            </div>
+                        </div>
+                        <div class="stats-card">
+                            <div class="stats-number">
+                                <p> ~ 6,000 liters</p>
+                            </div>
+                            <div class="stats-title">
+                                <p>Water saved vs. virgin equivalent</p>
+                                <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-report">
+                        <div class="stats-card">
+                            <div class="stats-number">
+                                <p>600 Kgs</p>
+                            </div>
+                            <div class="stats-title">
+                                <p>Virgin Plastic Saved</p>
+                                <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                            </div>
+                        </div>
+                        <div class="stats-card">
+                            <div class="stats-number">
+                                <p>660 Kgs</p>
+                            </div>
+                            <div class="stats-title">
+                                <p>Total Plastic Waste Used</p>
+                                <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-report1">
+                        <div class="stats-card1">
+                            <div class="stats-number1">
+                                <p>5,836 kWh</p>
+                            </div>
+                            <div class="stats-title1">
+                                <p>Electricity saved vs. virgin equivalent</p>
+                                <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-box-container">
+                    <div class="mf-name expand-btn">
+                        <p>Material Movement</p>
+                        <a href="./map.html"><button type="button"><img src="./assets/images/Vector.png" alt="Expand Icon">Expand view</button></a>
+                    </div>
+
+                    <div class="map-container">
+                        <div class="map-button-container">
+                            <div class="buttons-container" id="btn1">
+                                <div type="button" class="btn-click active" data="1">
+
+                                    <img src="assets\images\Vectorall-icon.png" alt="Collection Icon"
+                                        class="btn-icons ">
+                                    All
+                                </div>
+                            </div>
+
+                            <div class="buttons-container" data="2">
+                                <div type="button" class="btn-click" data="2">
+                                    <img src="assets\images\collection-icon.png" alt="Collection Icon"
+                                        class="btn-icons ">
+
+                                    Collection
+                                </div>
+                            </div>
+
+                            <div class="buttons-container" data="3">
+                                <div type="button" class="btn-click" data="3">
+                                    <img src="assets\images\recycling-icon.png" alt="Collection Icon"
+                                        class="btn-icons ">
+                                    Recycling
+                                </div>
+                            </div>
+
+                            <div class="buttons-container" data="4">
+                                <div type="button" class="btn-click" data="4">
+                                    <img src="assets\images\product-icon.png" alt="Collection Icon " class="btn-icons ">
+                                    Product
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mapbox-container">
+                            <div class="map-content map-active" id="mapbox1">
+                                <div id="infoBox"></div>
+                            </div>
+
+                            <div class="map-content map-active" id="mapbox2">
+                                <div id="infoBox2"></div>
+                            </div>
+
+                            <div class="map-content map-active" id="mapbox3">
+                                <div id="infoBox3"></div>
+                            </div>
+
+                            <div class="map-content map-active" id="mapbox4">
+                                <div id="infoBox4"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progressbar"></div>
+                </div>
+
+                <div class="material-flow material-chart2">
+                    <div class="mf-name expand-btn">
+                        <p>Material Flow</p>
+                        <a href="./flow.html"><button type="button"><img src="./assets/images/Vector.png" alt="Expand Icon">Expand view</button></a>
+                    </div>
+                    <div class="material-flow-chart">
+                        <div id="chartdiv"></div>
+                        <img src="./assets/images/material-flow-chart.png" id="imageMaterialFlow" alt="Material Flow Chart">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="images-section">
+            <div class="mf-name">
+                <p>Process Images</p>
+            </div>
+
+            <div class="image-gallery-container">
+                <div class="image-content imageshold">
+                    <img src="assets\images\img1.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img2.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img3.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img4.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img5.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img6.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img7.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img8.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img9.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img10.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img11.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img12.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img13.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img14.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img15.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img16.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img17.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img18.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img19.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img20.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 29, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img21.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img22.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img23.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img24.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img25.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img26.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img27.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img28.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img29.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img30.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img31.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img32.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img33.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img33.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img34.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img35.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img36.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img37.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img38.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img39.jpg" alt="image not found" class="imageGallery">
+                    <p>Apr 30, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396191 </p>
+                </div>
+            </div>
+
+            <div class="popup-image">
+                <span> &times; </span>
+                <img src="assets\images\img1.jpg">
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

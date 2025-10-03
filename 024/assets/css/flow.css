@@ -1,0 +1,16 @@
+.material-flow {
+    width: 100%;
+    height: auto;
+}
+.material-flow-chart, #imageMaterialFlow {
+    width: 100%;
+    height: 90vh;
+}
+.expand-btn button {
+    width: 110px !important;
+}
+@media screen and (max-width: 750px) {
+    .material-flow-chart, #imageMaterialFlow {
+        height: auto !important;
+    }
+}

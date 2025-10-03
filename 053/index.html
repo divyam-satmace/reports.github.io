@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Satma CE | Mumbai</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="assets\images\favicon.ico">
+
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css">
+    <script defer src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+
+    <script defer src="//cdn.amcharts.com/lib/4/core.js"></script>
+    <script defer src="//cdn.amcharts.com/lib/4/charts.js"></script>
+    <script defer src="//cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script defer src="//cdn.amcharts.com/lib/4/themes/material.js"></script>
+    <script defer src="//cdn.amcharts.com/lib/4/themes/dark.js"></script>
+    <script defer src="//cdn.amcharts.com/lib/4/themes/kelly.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/flow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <script defer src="./assets/js/map.js"></script>
+    <script defer src="./assets/js/chart.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/2d40bf0dbe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <div class="nav-item">
+            <img src="assets\images\HDI LOGO.png" alt="Logo">
+        </div>
+
+        <div class="satma-nav">
+            
+                <div class="nav-button">
+                    Traceability & Impact Report
+                    <img src="assets\images\vartullogo.png" alt="Plastic Bags">
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="website-container">
+        <div class="main-container">
+            <div class="first">
+                <div class="product-info-container">
+                    <div class="product-img">
+                        <div class="product-info1">
+                            <div class="product-title">
+                                <span id="pt-title">LDN400</span><span id="pt-company"></span>
+                                <p id = "pt-description">100% recycled LDPE Granules</p>
+                            </div>
+                            <div class="product-desc-img">
+                                <p id="pt-description"> <img src="assets\images\product-icon1.svg" alt=""
+                                        id="product-icon1">&nbsp; Product ID : <span id="pt-bg"> 12345</span> <br>
+                                    <img src="assets\images\product-icon2.svg" alt=""
+                                        id="product-icon1"> Item code : <span id="pt-bg">SBT-346,SBT-347,SBT-348</span> <br>
+                                    <img src="assets\images\product-icon3.svg" alt=""
+                                        id="product-icon1"> HSN code :  <span id="pt-bg">39012000</span>
+                                   </p>
+                                <img src="assets\images\LDN400.jpg" alt="Plastic Bags" id="imageBags">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-report-container mobile-stats-report1">
+                        <div class="mf-name">
+                            <p>Impact Numbers</p>
+                        </div>
+
+                        <div class="stats-report">
+                            <div class="stats-card">
+                                <div class="stats-number">
+                                    <p> ~ 10,400 KGs</p>
+                                </div>
+                                <div class="stats-title">
+                                    <p>Carbon Saved</p>
+                                    <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img
+                                            src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                                </div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stats-number">
+                                    <p> ~ 66,000 liters</p>
+                                </div>
+                                <div class="stats-title">
+                                    <p>Water saved vs. virgin equivalent</p>
+                                    <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img
+                                            src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stats-report">
+                            <div class="stats-card">
+                                <div class="stats-number">
+                                    <p> ~ 5,000 KGs</p>
+                                </div>
+                                <div class="stats-title">
+                                    <p>Virgin Plastic Saved</p>
+                                    <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img
+                                            src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                                </div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stats-number">
+                                    <p> ~11,000 KGs</p>
+                                </div>
+                                <div class="stats-title">
+                                    <p>Total Plastic Waste Used</p>
+                                    <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img
+                                            src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stats-report1">
+                            <div class="stats-card1">
+                                <div class="stats-number1">
+                                    <p> ~ 89,792 kWh</p>
+                                </div>
+                                <div class="stats-title1">
+                                    <p>Energy saved vs. virgin equivalent</p>
+                                    <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img
+                                            src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info2">
+                            <div class="company-info">
+                                <p>Invoice Number <b>TGJ241692</b> </p>
+                            </div>
+                            <div class="company-info">
+                                <p>Invoice Date &nbsp;&nbsp;<b> June 24, 2025</b> </p>
+                            </div>
+                        </div>
+
+                        <div class="company-info1">
+                            <p>Invoice Number & Date<b> <br>TGJ241692 , June 24, 2025 </b> </p>
+                        </div>
+
+                        <div class="company-info1">
+                            <p>Total Quantity <b> <br> 5,000 KGs</b> </p>
+                        </div>
+
+                        <div class="company-info1">
+                            <p>Dispatch To :<b> <br> Tattva LLP<br> 
+                                </b> </p>
+                        </div>
+
+
+                        <div class="company-info1">
+                            <p>Certification<b> <br> GRS version 4</b> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="material-flow material-chart1">
+                    <div class="mf-name expand-btn">
+                        <p>Material Flow</p>
+                        <a href="./flow.html"><button type="button"><img src="./assets/images/Vector.png"
+                                    alt="Expand Icon">Expand view</button></a>
+                    </div>
+                    <div class="material-flow-chart">
+                        <div id="chartdiv"></div>
+                        <img src="./assets/images/material-flow.png" id="imageMaterialFlow" alt="Material Flow Chart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="middle">
+                <div class="stats-report-container mobile-stats-report2">
+                    <div class="mf-name">
+                        <p>Impact Numbers</p>
+                    </div>
+
+                    <div class="stats-report">
+                        <div class="stats-card">
+                            <div class="stats-number">
+                                <p> ~10,400 KGs</p>
+                            </div>
+                            <div class="stats-title">
+                                <p>Carbon Saved</p>
+                                <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img
+                                        src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                            </div>
+                        </div>
+                        <div class="stats-card">
+                            <div class="stats-number">
+                                <p> ~ 66,000 liters</p>
+                            </div>
+                            <div class="stats-title">
+                                <p>Water saved vs. virgin equivalent</p>
+                                <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img
+                                        src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-report">
+                        <div class="stats-card">
+                            <div class="stats-number">
+                                <p>~ 5,000 KGs</p>
+                            </div>
+                            <div class="stats-title">
+                                <p>Virgin Plastic Saved</p>
+                                <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img
+                                        src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                            </div>
+                        </div>
+                        <div class="stats-card">
+                            <div class="stats-number">
+                                <p>~ 11,000 KGs</p>
+                            </div>
+                            <div class="stats-title">
+                                <p>Total Plastic Waste Used</p>
+                                <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img
+                                        src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-report1">
+                        <div class="stats-card1">
+                            <div class="stats-number1">
+                                <p>~ 89,792 kWh</p>
+                            </div>
+                            <div class="stats-title1">
+                                <p>Energy saved vs. virgin equivalent</p>
+                                <a href="https://www.thecirculateinitiative.org/ghg-calculator" title="Link"><img
+                                        src="assets\images\arrow-link.png" alt="" id="stats-img"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-box-container">
+                    <div class="mf-name expand-btn">
+                        <p>Material Movement</p>
+                        <a href="./map.html"><button type="button"><img src="./assets/images/Vector.png"
+                                    alt="Expand Icon">Expand view</button></a>
+                    </div>
+
+                    <div class="map-container">
+                        <div class="map-button-container">
+                            <div class="buttons-container" id="btn1">
+                                <div type="button" class="btn-click active" data="1">
+
+                                    <img src="assets\images\Vectorall-icon.png" alt="Collection Icon"
+                                        class="btn-icons ">
+                                    All
+                                </div>
+                            </div>
+
+                            <div class="buttons-container" id="btn2" data="2">
+                                <div type="button" class="btn-click" data="2">
+                                    <img src="assets\images\collection-icon.png" alt="Collection Icon"
+                                        class="btn-icons ">
+
+                                    Collection
+                                </div>
+                            </div>
+
+                            <div class="buttons-container" id="btn3" data="3">
+                                <div type="button" class="btn-click" data="3">
+                                    <img src="assets\images\recycling-icon.png" alt="Collection Icon"
+                                        class="btn-icons ">
+                                    Recycling
+                                </div>
+                            </div>
+
+                            </div>
+
+                        <div class="mapbox-container">
+                            <div class="map-content map-active" id="mapbox1">
+                                <div id="infoBox"></div>
+                            </div>
+
+                            <div class="map-content map-active" id="mapbox2">
+                                <div id="infoBox2"></div>
+                            </div>
+
+                            <div class="map-content map-active" id="mapbox3">
+                                <div id="infoBox3"></div>
+                            </div>
+
+                            </div>
+                    </div>
+
+                    <div class="progressbar"></div>
+                </div>
+
+                <div class="material-flow material-chart2">
+                    <div class="mf-name expand-btn">
+                        <p>Material Flow</p>
+                        <a href="./flow.html"><button type="button"><img src="./assets/images/Vector.png"
+                                    alt="Expand Icon">Expand view</button></a>
+                    </div>
+                    <div class="material-flow-chart">
+                        <div id="chartdiv"></div>
+                        <img src="./assets/images/material-flow.png" id="imageMaterialFlow" alt="Material Flow Chart">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="images-section">
+            <div class="mf-name">
+                <p>Process Images</p>
+            </div>
+
+            <div class="image-gallery-container">
+                <div class="image-content imageshold">
+                    <img src="assets\images\img1.jpg" alt="collection-1" class="imageGallery">
+                    <p>Jun 13, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img2.jpg" alt="collection-1" class="imageGallery">
+                    <p>Jun 13, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                <div class="image-content imageshold">
+                    <img src="assets\images\img3.jpg" alt="collection-1" class="imageGallery">
+                    <p>Jun 13, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 396150 </p>
+                </div>
+                
+                <div class="image-content">
+                    <img src="assets\images\img4.jpg" alt="collection-1" class="imageGallery">
+                    <p>Jun 14, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 411002 </p>
+                </div>
+                <div class="image-content">
+                    <img src="assets\images\img5.jpg" alt="collection-1" class="imageGallery">
+                    <p>Jun 14, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 411002 </p>
+                </div>
+                <div class="image-content">
+                    <img src="assets\images\img6.jpg" alt="collection-1" class="imageGallery">
+                    <p>Jun 14, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 411002 </p>
+                </div>
+
+                <div class="image-content">
+                    <img src="assets\images\img7.jpg" alt="collection-1" class="imageGallery">
+                    <p>Jun 15, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 301707 </p>
+                </div>
+                <div class="image-content">
+                    <img src="assets\images\img8.jpg" alt="collection-1" class="imageGallery">
+                    <p>Jun 15, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 301707 </p>
+                </div>
+                <div class="image-content">
+                    <img src="assets\images\img9.jpg" alt="collection-1" class="imageGallery">
+                    <p>Jun 15, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 301707 </p>
+                </div>
+                <div class="image-content">
+                    <img src="assets\images\img10.jpg" alt="collection-1" class="imageGallery">
+                    <p>Jun 15, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 301707 </p>
+                </div>
+            </div>
+
+            <div class="popup-image">
+                <span> &times; </span>
+                <img src="assets\images\img1.jpg">
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+
+</html>
