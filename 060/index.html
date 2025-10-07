@@ -2,36 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Satma CE | Mumbai</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Vartul | Mumbai</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
-    <link rel="icon" type="image/x-icon" href="assets\images\favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="./assets/css/style.css   ">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css">
-    <script defer src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 
-    <script defer src="//cdn.amcharts.com/lib/4/core.js"></script>
-    <script defer src="//cdn.amcharts.com/lib/4/charts.js"></script>
-    <script defer src="//cdn.amcharts.com/lib/4/themes/animated.js"></script>
-    <script defer src="//cdn.amcharts.com/lib/4/themes/material.js"></script>
-    <script defer src="//cdn.amcharts.com/lib/4/themes/dark.js"></script>
-    <script defer src="//cdn.amcharts.com/lib/4/themes/kelly.js"></script>
+  <link rel="shortcut icon" href="./assets/images/vartullogo.png" type="image/x-icon">
+  <link rel="icon" type="image/x-icon" href="./assets/images/vartullogo.png">
 
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/flow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css">
+  <script defer src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 
-    <script defer src="./assets/js/map.js"></script>
-    <script defer src="./assets/js/chart.js"></script>
-    <script defer src="./assets/js/script.js"></script>
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="//cdn.amcharts.com/lib/4/core.js"></script>
+  <script defer src="//cdn.amcharts.com/lib/4/charts.js"></script>
+  <script defer src="//cdn.amcharts.com/lib/4/themes/animated.js"></script>
+  <script defer src="//cdn.amcharts.com/lib/4/themes/material.js"></script>
+  <script defer src="//cdn.amcharts.com/lib/4/themes/dark.js"></script>
+  <script defer src="//cdn.amcharts.com/lib/4/themes/kelly.js"></script>
+  <script defer src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script defer src="https://cdn.amcharts.com/lib/5/flow.js"></script>
+  <script defer src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+  <script defer src="./assets/js/map.js"></script>
+  <script defer src="./assets/js/chart.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    .material-flow{
+        height: 500px;
+    }
+
+    @media screen and (max-width: 750px) {
+    .map-box-container {
+        height: 550px !important;
+    }
+    
+    }
+    .map-box-container {
+    height: 450px ;
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -144,13 +163,14 @@
                                 <p>Invoice Date &nbsp;&nbsp;<b> Sep 21, 2025</b> </p>
                             </div>
                         </div>
-
-                        <div class="company-info1">
+                        <div class="product-info2">
+                        <div class="company-info">
                             <p>Total Quantity<b> <br>20,000 KGs</b> </p>
                         </div>
 
-                        <div class="company-info1">
+                        <div class="company-info">
                             <p>Certification<b> <br> GRS</b> </p>
+                        </div>
                         </div>
 
                         <div class="company-info1">
@@ -166,11 +186,11 @@
                 </div>
 
                 <div class="material-flow material-chart1">
-                    <div class="mf-name expand-btn">
+                    <!-- <div class="mf-name expand-btn">
                         <p>Material Flow</p>
                         <a href="./flow.html"><button type="button"><img src="./assets/images/Vector.png"
                                     alt="Expand Icon">Expand view</button></a>
-                    </div>
+                    </div> -->
                     <div class="material-flow-chart">
                         <div id="chartdiv"></div>
                         <img src="./assets/images/material-flow.png" id="imageMaterialFlow" alt="Material Flow Chart">
@@ -245,11 +265,11 @@
                 </div>
 
                 <div class="map-box-container">
-                    <div class="mf-name expand-btn">
+                    <!-- <div class="mf-name expand-btn">
                         <p>Material Movement</p>
                         <a href="./map.html"><button type="button"><img src="./assets/images/Vector.png"
                                     alt="Expand Icon">Expand view</button></a>
-                    </div>
+                    </div> -->
 
                     <div class="map-container">
                         <div class="map-button-container">
@@ -301,11 +321,11 @@
                 </div>
 
                 <div class="material-flow material-chart2">
-                    <div class="mf-name expand-btn">
+                    <!-- <div class="mf-name expand-btn">
                         <p>Material Flow</p>
                         <a href="./flow.html"><button type="button"><img src="./assets/images/Vector.png"
                                     alt="Expand Icon">Expand view</button></a>
-                    </div>
+                    </div> -->
                     <div class="material-flow-chart">
                         <div id="chartdiv"></div>
                         <img src="./assets/images/material-flow.png" id="imageMaterialFlow" alt="Material Flow Chart">
