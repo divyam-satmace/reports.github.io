@@ -93,7 +93,7 @@ a {
 
 .product-info-container {
     display: flex;
-    height: 500px;
+    height: 400px;
     align-items: flex-start;
     gap: 18px;
 }
@@ -190,6 +190,23 @@ a {
     font-weight: 400;
     letter-spacing: 0.7px;
 }
+
+/* FIX: Text Wrapping Rules for Long Fields */
+/* Apply these rules to all elements that may contain long, non-breaking text (like IDs or long titles) */
+.product-title,
+#pt-description,
+.company-info,
+.company-info1,
+.stats-number p,
+.stats-number1 p,
+.stats-title p,
+.stats-title1 p {
+    word-wrap: break-word; /* Legacy property for breaking long words */
+    overflow-wrap: break-word; /* Modern property for breaking long words */
+    word-break: break-word; /* Ensures long words or continuous strings break to prevent overflow */
+    white-space: normal; /* Ensures text wrapping is enabled, overriding potential nowrap */
+}
+/* END FIX */
 
 /* Stats */
 .stats-report {
@@ -726,8 +743,9 @@ a {
 
 }
 
-/* --- Start of Mobile-specific Rules --- */
+/* --- Start of Mobile-specific Rules: Revised Fixes for max-width: 750px --- */
 @media screen and (max-width: 750px) {
+    /* General Layout */
     .middle {
         width: 100% !important;
         max-width: 100% !important;
@@ -737,42 +755,67 @@ a {
         justify-content: center;
         padding: 16px;
     }
-
-    .product-info-container {
-        /* FIX: Increased height to give space for all content */
-        height: auto;
-        padding-bottom: 24px; /* Add some padding to the bottom */
-        flex-direction: column;
-        gap: 16px; /* Reduced gap for a tighter look */
+    .first {
+        width: 100%;
+        align-items: center;
     }
 
-    /* FIX: The main card wrapper. Made height dynamic and set position context for image */
-   
-    /* FIX: Product Info Text Container - Set maximum width to avoid overlap with image */
-        .product-info {
-        /* This is the key change: limits the width of the text container
-        to clear the area where the image is absolutely positioned. */
-        max-width: calc(100% - 120px); /* 100px image width + 20px buffer */
-        width: auto;
+    /* Product Info Container Fixes */
+    .product-info-container {
+        height: auto; /* Allow height to be determined by content */
+        padding-bottom: 24px;
+        flex-direction: column; /* Stack all elements vertically */
+        gap: 16px;
+    }
+
+    /* Product Card (.product-img) - Set relative context for image, ensure full width */
+    .product-img {
+        position: relative;
+        padding: 20px 16px;
+        width: 100%; /* Full width of the container */
+        height: auto;
+        min-height: 200px; /* Ensure enough minimum height for content and image */
+        flex-direction: column;
+    }
+
+    /* Product Info (Text Group) - Allow full width within card, position to clear image area */
+    .product-info {
+        max-width: 100%; /* Use full width for text content */
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 12px;
         align-items: flex-start;
     }
 
-    /* FIX: Product Info 1 is the Title and Description container. Limit its width. */
     .product-info1 {
-        /* Inherit the restricted width from .product-info to ensure content is constrained */
         width: 100%;
         height: auto;
-        gap: 4px;
+        gap: 12px; /* Increased gap for better spacing */
         justify-content: flex-start;
+    }
+
+    /* FIX: Image Position - Move the product image to the top right inside .product-img */
+    #imageBags {
+        position: absolute;
+        top: 20px; /* Aligned with the top padding of the card */
+        right: 16px; /* Aligned with the right padding of the card */
+        width: 100px;
+        height: 100px;
+        margin: 0;
+    }
+
+    /* Force the product title to have a max width to prevent overlap with the absolute image */
+    .product-title {
+        word-wrap: break-word;
+        max-width: calc(100% - 130px); /* Adjust based on image width (100px) + margin */
     }
 
     /* The container for the item/HSN codes and image */
     .product-desc-img {
-        display: flex; /* Makes the p#pt-description and img#imageBags align side-by-side (before image is absolute) */
-        /* You might not need to change this if the image is absolute. */
+        display: flex; 
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     /* The text for item and HSN codes */
@@ -785,121 +828,73 @@ a {
         min-width: 0;
         height: auto;
     }
-    
-    /* FIX: Absolute positioned image to the top right */
-    #imageBags {
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
-        width: 100px; /* Reduced size to take up less space */
-        height: 100px; /* Reduced size to take up less space */
-        margin: 0;
-    }
-    
-    /* FIX: The overall product card wrapper. Need to make sure it establishes a relative context. */
-    .product-img {
-        position: relative;
-        padding: 20px 16px;
-        width: 100%;
-        height: auto; 
-        min-height: 150px; /* Ensure enough height for the image (100px) + padding */
-        display: flex; /* Maintain flex to structure content correctly */
-        flex-direction: column;
-    }
-
-    
-
-    .product-title {
-        /* Ensure the title text wraps correctly */
-        word-wrap: break-word;
-        max-width: 100%;
-    }
-
-    /* FIX: Absolute positioned image to the top right */
-    
 
     .product-info2 {
-        justify-content: flex-start; /* Align codes to the left */
-        flex-direction: column; /* Stack codes vertically */
+        justify-content: flex-start;
+        flex-direction: row; /* Keep side-by-side for 2 small boxes if possible */
+        flex-wrap: wrap; /* Allow wrapping if not enough space */
         align-items: flex-start;
-        gap: 4px; /* Reduced gap between codes */
+        gap: 8px; /* Standard gap */
+        width: 100%; /* Ensure container takes full width */
     }
-    
-    
-    /* --- General Mobile Layout Reset --- */
 
-    .first {
-        width: 100%;
-        align-items: center;
-    }
-    
     .company-info {
+        width: calc(50% - 4px); /* Make two columns of small info boxes */
         padding: 20px 16px;
     }
 
     .company-info,
     .company-info1 {
-        width: 100%;
+        width: 100%; /* Fallback for company-info1, force full width if only one element */
     }
 
-    .material-flow {
+    /* Stats Card Layout Fixes */
+    .stats-report {
+        flex-direction: column; /* Stack the cards vertically */
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .stats-report1 {
+        align-self: unset !important;
         width: 100% !important;
-        height: auto !important;
+    }
+
+    .stats-card {
+        width: 100% !important; /* Full width for each card */
     }
 
     .stats-report-container {
         padding: 10px;
         justify-content: center;
-        align-items: center !important;
-        
+        align-items: flex-start !important; /* Align content to the left inside the card */
     }
 
-    .stats-report {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .stats-report1 {
-        align-self: unset !important;
-        width: 100% !important;
-        
-    }
-
-    .stats-card {
-        width: 100% !important;
-    }
-
-    .map-button-container {
-        width: 100% !important;
-    }
-
-    .map-box-container {
-        height: 500px !important;
-    }
-
-    .mapbox-container {
-        /* width: 320px !important; */
-        width: 100% !important;
-        height: 440px !important;
-    }
-
-    .map-button-container {
-        /* height: 40px;
-        max-width: 300px;
-        position: relative !important;
-        left: 0 !important;
-        top: -10px !important;
-        padding: 0;
-        margin: 12px 0;
-        overflow-x: auto; */
+    /* Hide desktop stats and show mobile stats */
+    .mobile-stats-report1 {
         display: flex;
-        padding: var(--radius-zero, 0px);
+        width: 100%;
+        align-items: flex-start !important;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 30px;
-        position: absolute;
-        left: 10px;
-        top: 20px;
+    }
+
+    .mobile-stats-report2 {
+        display: none;
+    }
+    
+    /* Chart and Flow */
+    .material-flow {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .material-chart1 {
+        display: none;
+    }
+
+    .material-chart2 {
+        display: flex;
+        width: 100%;
     }
 
     .material-flow-chart {
@@ -917,33 +912,46 @@ a {
         border-radius: var(--radius-lg, 16px);
         border: 2px solid var(--grey-grey-tint, #F0F0F0);
     }
-
-    .mobile-stats-report1 .mf-name {
-        width: 100%;
-        padding: 8px 6px;
-    }
-
-    .mobile-stats-report1 {
+    
+    /* Map Button Fixes */
+    .map-button-container {
+        width: 100% !important;
         display: flex;
+        flex-direction: row; /* Force buttons to be in a row for horizontal scroll */
+        gap: 8px;
+        position: relative !important; /* Use relative positioning instead of absolute over map */
+        left: 0 !important;
+        top: 0 !important;
+        padding: 0;
+        margin-bottom: 12px;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        
+        /* Reset button styles */
+        align-items: flex-start;
+    }
+    
+    .buttons-container {
+        flex-shrink: 0; /* Prevent buttons from shrinking */
+        height: auto;
     }
 
-    .mobile-stats-report2 {
-        display: none;
+    .map-box-container {
+        height: 550px !important; /* Slightly taller for better map view */
     }
 
+    .mapbox-container {
+        width: 100% !important;
+        height: 440px !important;
+    }
+    
+    /* Other mobile resets */
     .company-info p b {
         text-align: left;
         display: block;
     }
 
-    .material-chart1 {
-        display: none;
-    }
-
-    .material-chart2 {
-        display: flex;
-    }
 }
+/* --- End of Mobile-specific Rules: Revised Fixes for max-width: 750px --- */
 
 /* Nav Responsive */
 @media screen and (max-width: 650px) {
