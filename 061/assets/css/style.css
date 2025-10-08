@@ -8,6 +8,9 @@ body {
     min-height: 80vh;
     background-color: #F0F0F0;
     font-family: 'Urbanist', sans-serif;
+    /* FIX: Added overflow-x: hidden to the body to prevent general horizontal scrolling */
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -67,6 +70,7 @@ a {
     align-items: flex-start;
     gap: var(--spacing-3, 24px);
     align-self: stretch;
+    width: 100%;
 }
 
 /* Main Body */
@@ -76,6 +80,7 @@ a {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 24px;
+    width: 100%;
 }
 
 /* Left Part */
@@ -200,7 +205,7 @@ a {
     align-items: flex-start;
     align-self: stretch;
     border-radius: 16px;
-    border: 1px  #4FC7C2;
+    border: 1px #4FC7C2;
 }
 
 .stats-report-container {
@@ -369,7 +374,7 @@ a {
 /* map-box */
 .map-box-container {
     width: 100%;
-    height: 450px;
+    height: 380px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -481,23 +486,6 @@ a {
     transition: 0.8s ease;
 }
 
-/* #btn1 .btn-click {
-    color: black;
-    background-color: #C3F5EC;
-}
-#btn2 .btn-click {
-    color: white;
-    background-color: #40cf85;
-}
-#btn3 .btn-click {
-    color: white;
-    background-color: #6289ed;
-}
-#btn4 .btn-click {
-    color: white;
-    background-color: #083739;
-} */
-
 .mapbox-container {
     display: block;
     /* width: 640px; */
@@ -553,6 +541,7 @@ a {
     border-radius: 16px;
     background: #FFFFFF;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
+    width: 100%;
 }
 
 .mf-name p {
@@ -713,7 +702,8 @@ a {
     }
 
     .image-gallery-container {
-        width: 105vw;
+        /* FIX: Changed 105vw to 100% to stop horizontal overflow on desktop */
+        width: 100%;
         max-width: 1300px;
         display: flex;
         justify-content: flex-start;
@@ -736,8 +726,7 @@ a {
 
 }
 
-
-
+/* --- Start of Mobile-specific Rules --- */
 @media screen and (max-width: 750px) {
     .middle {
         width: 100% !important;
@@ -750,48 +739,100 @@ a {
     }
 
     .product-info-container {
-        /* width: 100%; */
+        /* FIX: Increased height to give space for all content */
         height: auto;
+        padding-bottom: 24px; /* Add some padding to the bottom */
         flex-direction: column;
+        gap: 16px; /* Reduced gap for a tighter look */
     }
 
-    .product-img {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .product-info {
-        width: 100%;
-        align-items: center;
-    }
-
-    .product-info1 {
-        width: 100%;
-        height: 132px;
-        justify-content: space-around;
-    }
-
-    .product-desc-img {
-        width: 100%;
-        height: 80px;
+    /* FIX: The main card wrapper. Made height dynamic and set position context for image */
+   
+    /* FIX: Product Info Text Container - Set maximum width to avoid overlap with image */
+        .product-info {
+        /* This is the key change: limits the width of the text container
+        to clear the area where the image is absolutely positioned. */
+        max-width: calc(100% - 120px); /* 100px image width + 20px buffer */
+        width: auto;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
     }
 
+    /* FIX: Product Info 1 is the Title and Description container. Limit its width. */
+    .product-info1 {
+        /* Inherit the restricted width from .product-info to ensure content is constrained */
+        width: 100%;
+        height: auto;
+        gap: 4px;
+        justify-content: flex-start;
+    }
+
+    /* The container for the item/HSN codes and image */
+    .product-desc-img {
+        display: flex; /* Makes the p#pt-description and img#imageBags align side-by-side (before image is absolute) */
+        /* You might not need to change this if the image is absolute. */
+    }
+
+    /* The text for item and HSN codes */
     #pt-description {
         letter-spacing: .7px;
         line-height: 1.5rem;
         font-size: 14px;
+        display: block;
+        flex-shrink: 1;
+        min-width: 0;
+        height: auto;
     }
-
+    
+    /* FIX: Absolute positioned image to the top right */
     #imageBags {
-        /* width: 150px; */
-        height: 100px;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        width: 100px; /* Reduced size to take up less space */
+        height: 100px; /* Reduced size to take up less space */
         margin: 0;
     }
+    
+    /* FIX: The overall product card wrapper. Need to make sure it establishes a relative context. */
+    .product-img {
+        position: relative;
+        padding: 20px 16px;
+        width: 100%;
+        height: auto; 
+        min-height: 150px; /* Ensure enough height for the image (100px) + padding */
+        display: flex; /* Maintain flex to structure content correctly */
+        flex-direction: column;
+    }
 
+    
+
+    .product-title {
+        /* Ensure the title text wraps correctly */
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+
+    /* FIX: Absolute positioned image to the top right */
+    
+
+    .product-info2 {
+        justify-content: flex-start; /* Align codes to the left */
+        flex-direction: column; /* Stack codes vertically */
+        align-items: flex-start;
+        gap: 4px; /* Reduced gap between codes */
+    }
+    
+    
+    /* --- General Mobile Layout Reset --- */
+
+    .first {
+        width: 100%;
+        align-items: center;
+    }
+    
     .company-info {
         padding: 20px 16px;
     }
@@ -799,15 +840,6 @@ a {
     .company-info,
     .company-info1 {
         width: 100%;
-    }
-
-    .product-info2 {
-        justify-content: center;
-    }
-
-    .first {
-        width: 100%;
-        align-items: center;
     }
 
     .material-flow {
@@ -940,25 +972,4 @@ a {
         overflow-x: hidden;
         overflow-y: auto;
     }
-
-    .product-img {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* centers vertically inside container */
-        align-items: center;     /* centers horizontally */
-        padding: 50px 20px;
-        width: 100%;             /* stretch full width if needed */
-        border-radius: 16px;
-        background: #FFFFFF;
-        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.16);
-    }
-
-    .product-img img {
-        max-width: 100%;         /* image scales with container */
-        height: 1000px;
-        display: block;
-        margin: 0 auto;          /* ensure image is centered */
-    }
-
-
 }
