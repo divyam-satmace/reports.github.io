@@ -8,10 +8,10 @@
   <title>Vartul | Mumbai</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="./assets/css/style.css   ">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="./assets/css/style.css?v=1.0">
 
   <link rel="shortcut icon" href="./assets/images/vartullogo.png" type="image/x-icon">
   <link rel="icon" type="image/x-icon" href="./assets/images/vartullogo.png">
@@ -34,25 +34,43 @@
   <script defer src="./assets/js/script.js"></script>
   <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+
   <style>
+    .nav-button img {
+    width: 120px;
+    height: 50px;
+    }
+    body {
+    min-height: 80vh;
+    background-color: #F0F0F0;
+    font-family: 'Urbanist', sans-serif;
+    }
+    .nav-item img {
+    width: 115px;
+    height: 50px;
+    }
     .material-flow{
         height: 500px;
     }
 
     @media screen and (max-width: 750px) {
-    .map-box-container {
-        height: 550px !important;
+
+        .product-img {
+            align-items: center;
+            justify-content: center;
+            height: 250px;
+        }
     }
-    
-    }
-    .map-box-container {
-    height: 450px ;
+    .stats-report1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px  #4FC7C2;
     }
   </style>
-
-
 </head>
-
 <body>
 
     <div class="nav-bar">
@@ -77,15 +95,17 @@
                     <div class="product-img">
                         <div class="product-info1">
                             <div class="product-title">
-                                <span id="pt-title">ASDA Soft Loop Retail Bag (50% PCR)</span><span
+                                <span id="pt-title">ASDA Soft-Loop Retail Bag (50% PCR)</span><span
                                     id="pt-company"></span>
                             </div>
                             <div class="product-desc-img">
-                                 <img src="assets\images\product-icon2.svg" alt=""
+                                <p id="pt-description"> 
+                                        <img src="assets\images\product-icon2.svg" alt=""
                                         id="product-icon1"> Item code : <span id="pt-bg">DCR001</span> <br>
                                         <br>
                                         <img src="assets\images\product-icon3.svg" alt=""
                                         id="product-icon1"> HSN code :  <span id="pt-bg">39232100</span>
+                                 </p>
                                 <img src="assets\images\Asda.jpg" alt="Plastic Bags" id="imageBags">
                             </div>
                         </div>
@@ -146,7 +166,7 @@
                         <div class="stats-report1">
                             <div class="stats-card1">
                                 <div class="stats-number1">
-                                    <p> ~ 63,218 kWh</p>
+                                    <p> ~63,218 kWh</p>
                                 </div>
                                 <div class="stats-title1">
                                     <p>Energy saved vs. virgin equivalent</p>
@@ -163,21 +183,20 @@
                                 <p>Invoice Number <b>LGJ298319</b> </p>
                             </div>
                             <div class="company-info">
-                                <p>Invoice Date &nbsp;&nbsp;<b> Sep 21, 2025</b> </p>
+                                <p>Invoice Date &nbsp;&nbsp;<b>May 21, 2025</b> </p>
                             </div>
                         </div>
                         <div class="product-info2">
                         <div class="company-info">
                             <p>Total Quantity<b> <br>13,000 KGs</b> </p>
                         </div>
-
+ 
                         <div class="company-info">
                             <p>Certification<b> <br> GRS</b> </p>
                         </div>
                         </div>
-
                         <div class="company-info1">
-                            <p>Billed To<b> <br>ASDA Stores Ltd
+                            <p>Billed To<b> <br>ASDA Stores LTD
                                 </b> </p>
                         </div>
 
@@ -210,7 +229,7 @@
                     <div class="stats-report">
                         <div class="stats-card">
                             <div class="stats-number">
-                                <p> ~ 8,060KGs</p>
+                                <p> ~ 8.060KGs</p>
                             </div>
                             <div class="stats-title">
                                 <p>Carbon Saved</p>
@@ -345,15 +364,15 @@
             <div class="image-gallery-container">
                 <div class="image-content">
                     <img src="../all-images/1.jpg" alt="collection-1" class="imageGallery">
-                    <p>Sep 13, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 414111 </p>
+                    <p>Apr 13, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 414111 </p>
                 </div>
                 <div class="image-content">
                     <img src="../all-images/2.jpg" alt="collection-1" class="imageGallery">
-                    <p>Sep 13, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 414111 </p>
+                    <p>Apr 13, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 414111 </p>
                 </div>
                 <div class="image-content">
                     <img src="../all-images/3.jpg" alt="collection-1" class="imageGallery">
-                    <p>Sep 13, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 414111 </p>
+                    <p>Apr 13, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 414111 </p>
                 </div>
                 
             </div>

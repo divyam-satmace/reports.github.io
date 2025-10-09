@@ -7,10 +7,8 @@
 body {
     min-height: 80vh;
     background-color: #F0F0F0;
-    font-family: 'Urbanist', sans-serif;
-    /* FIX: Added overflow-x: hidden to the body to prevent general horizontal scrolling */
-    width: 100%;
-    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #283252;
 }
 
 /* Navbar */
@@ -36,12 +34,17 @@ body {
     padding: 4px 4px 4px 4px;
 }
 
+#product-icon1{
+    width: 15px;
+    height: 15px;
+}
+
 .nav-button {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    color: #202124;
+    color: #283252;
     font-family: "Urbanist", sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -50,8 +53,8 @@ body {
 }
 
 .nav-button img {
-    width: 100px;
-    height: 50px;
+    width: 120px;
+    height: 24px;
 }
 
 a {
@@ -70,7 +73,6 @@ a {
     align-items: flex-start;
     gap: var(--spacing-3, 24px);
     align-self: stretch;
-    width: 100%;
 }
 
 /* Main Body */
@@ -80,7 +82,6 @@ a {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 24px;
-    width: 100%;
 }
 
 /* Left Part */
@@ -93,14 +94,14 @@ a {
 
 .product-info-container {
     display: flex;
-    height: 400px;
+    height: 416px;
     align-items: flex-start;
     gap: 18px;
 }
 
 .product-img {
     display: flex;
-    padding: 20px 16px;
+    padding: 10px 16px 16px 16px;
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
@@ -111,12 +112,15 @@ a {
 
 #imageBags {
     width: 200px;
-    height: 200px;
-    margin: 40px 0 0 40px;
+    height: 170px;
+    margin: 25px 0 0 40px;
     border-radius: 10px;
 }
 
 .product-info {
+    
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -134,6 +138,8 @@ a {
 
 .product-info2 {
     width: 100%;
+    /* hirh */
+    height: 100px;
     display: flex;
     align-items: flex-start;
     gap: 8px;
@@ -151,6 +157,8 @@ a {
     display: flex;
     width: 146px;
     padding: 16px;
+    /* height */
+    height:100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
@@ -164,6 +172,7 @@ a {
 .company-info1 {
     display: flex;
     width: 300px;
+    height: 93px;
     padding: 13px;
     flex-direction: column;
     align-items: flex-start;
@@ -174,8 +183,12 @@ a {
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.16);
 }
 
+.company-info1 p{
+    padding: 10px;
+}
+
 .product-title {
-    color: var(--grey-raisin-black, #202124);
+    color: var(--grey-raisin-black, #283252);
     font-family: "Urbanist", sans-serif;
     font-size: 20px;
     font-weight: 700;
@@ -184,11 +197,13 @@ a {
 
 #pt-description {
     align-self: stretch;
-    color: var(--grey-raisin-black, #202124);
+    color: var(--grey-raisin-black, #283252);
     font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.7px;
+    line-height: 2; 
+    /* margin-bottom: 5px; */
 }
 
 /* Stats */
@@ -205,7 +220,7 @@ a {
     align-items: flex-start;
     align-self: stretch;
     border-radius: 16px;
-    border: 1px #4FC7C2;
+    border: 1px solid #4FC7C2;
 }
 
 .stats-report-container {
@@ -309,13 +324,13 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 24px;
 }
 
 .material-flow {
     display: flex;
     width: 650px;
-    height: 400px;
+    height: 440px;
     padding: 16px 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -374,7 +389,7 @@ a {
 /* map-box */
 .map-box-container {
     width: 100%;
-    height: 380px;
+    height: 440px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -486,6 +501,23 @@ a {
     transition: 0.8s ease;
 }
 
+/* #btn1 .btn-click {
+    color: black;
+    background-color: #C3F5EC;
+}
+#btn2 .btn-click {
+    color: white;
+    background-color: #40cf85;
+}
+#btn3 .btn-click {
+    color: white;
+    background-color: #6289ed;
+}
+#btn4 .btn-click {
+    color: white;
+    background-color: #083739;
+} */
+
 .mapbox-container {
     display: block;
     /* width: 640px; */
@@ -541,11 +573,10 @@ a {
     border-radius: 16px;
     background: #FFFFFF;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
-    width: 100%;
 }
 
 .mf-name p {
-    color: #202124;
+    color: #283252;
     font-family: "Urbanist", sans-serif;
     font-size: 22px;
     font-weight: 700;
@@ -637,7 +668,7 @@ a {
 
 .material-flow-chart {
     width: 100%;
-    height: 550px;
+    height: 330px;
 }
 
 #chartdiv {
@@ -653,17 +684,11 @@ a {
 }
 
 /* First/Middle Section Responsive */
-
-@media screen and (max-width: 1200px) {
-    .website-container {
-        padding-left: 100px;
-    }
-}
 @media screen and (min-width: 1200px) {
     .website-container {
-        padding-left: 200px;
+        display: flex;
+        align-items: center;
     }
-
 
     .main-container {
         justify-content: center;
@@ -702,8 +727,7 @@ a {
     }
 
     .image-gallery-container {
-        /* FIX: Changed 105vw to 100% to stop horizontal overflow on desktop */
-        width: 100%;
+        width: 105vw;
         max-width: 1300px;
         display: flex;
         justify-content: flex-start;
@@ -726,170 +750,59 @@ a {
 
 }
 
-/* --- Start of Mobile-specific Rules --- */
+
+
 @media screen and (max-width: 750px) {
     .middle {
         width: 100% !important;
         max-width: 100% !important;
-        gap: 20px;
     }
+
     .website-container {
         justify-content: center;
         padding: 16px;
     }
 
     .product-info-container {
-        /* FIX: Increased height to give space for all content */
+        /* width: 100%; */
         height: auto;
-        padding-bottom: 24px; /* Add some padding to the bottom */
         flex-direction: column;
-        gap: 16px; /* Reduced gap for a tighter look */
     }
 
     .product-img {
+        height: 15em;
         align-items: center;
         justify-content: center;
-        /* Removed fixed padding to rely on .product-info-container padding */
-        padding: 20px 16px; 
     }
 
     .product-info {
         width: 100%;
-        /* FIX: Align text content to the left inside the card on mobile */
-        align-items: flex-start;
-        padding: 0 16px;
+        align-items: center;
     }
 
     .product-info1 {
-        width: 100%;
-        height: auto; /* Allow height to adjust based on content */
-        gap: 8px; /* Reduced gap */
-        justify-content: flex-start;
+        /* width: 100%; */
+        height: 132px;
+        justify-content: space-around;
     }
 
-    /* FIX: Product Description/Image container - Changed from flex-row to column stack */
-    /* This allows the product name/codes to stack vertically above the image/description block */
     .product-desc-img {
         width: 100%;
-        /* FIX: Changed from flex to block/column-like flow if needed, or adjust flex behavior */
+        height: 80px;
         display: flex;
-        flex-direction: column; 
-        gap: 12px;
-        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
     }
 
-    /* FIX: Product codes (HNS/Item) */
     #pt-description {
         letter-spacing: .7px;
         line-height: 1.5rem;
         font-size: 14px;
-        display: block;
-        flex-shrink: 1;
-        min-width: 0;
-        /* FIX: Ensure multiline visibility by setting height auto */
-        height: auto; 
-    }
-
-    /* The Item Code and HSN Code lines likely live inside a container that needs full width */
-    .product-info2 {
-        width: 100%;
-        display: flex;
-        flex-direction: column; /* Stack HSN and Item codes vertically if they are direct children */
-        gap: 8px;
-        /* FIX: Align content to the left */
-        align-items: flex-start; 
-        padding: 0;
     }
 
     #imageBags {
-        width: 100px;
-        height: 100px;
-        margin: 0;
-        flex-shrink: 0;
-        /* FIX: Center the image in the card area */
-        align-self: flex-end; /* Pushes image to the right if space allows, adjust as needed */
-        margin-top: -100px; /* Pull the image up to the top right corner */
-    }
-    
-    /* Re-structuring the Product Card for Mobile (assuming this structure) */
-    /* The product card (the white background area) is likely .product-info-container inside .first */
-    /* Let's adjust .product-img which contains the image and text area */
-    
-    .product-img {
-        /* Set to flex to allow inner elements to position, but we'll manually control the layout */
-        display: flex;
-        flex-direction: row; /* Keep content and image on the same row temporarily for layout fixes */
-        justify-content: space-between;
-        padding: 20px;
-        width: 100%;
-        height: auto;
-    }
-    
-    /* Container for PPH03 and description */
-    .product-text-content {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        flex-grow: 1;
-    }
-    
-    /* If the HTML is structured like: PPH03 / Description / Codes / Image */
-    /* And assuming this is the container for PPH03 and description */
-    .product-info1 {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-    }
-
-    /* Let's adjust .product-info-container to be the main card container for mobile */
-    .product-info-container {
-        /* This is the main card element containing all product details */
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        /* We rely on the internal padding of .product-img/text containers */
-        padding: 0; 
-    }
-    
-    /* Reverting .product-img to its original role if it's the wrapper for the card content */
-    .product-img {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 16px;
-        width: 100%;
-        height: auto;
-    }
-
-    /* New structure attempt based on image: Header, Description, Codes (all left-aligned), Image (top-right) */
-    /* We'll use absolute positioning for the image to clear the space for text */
-    .product-img {
-        position: relative; /* Establish positioning context */
-        padding: 20px 16px;
-        width: 100%;
-        height: auto;
-        min-height: 150px; /* Ensure enough height for the image */
-        display: block; /* Remove flex constraints for easier positioning */
-    }
-
-    .product-info {
-        /* This contains title, description, and codes */
-        width: 75%; /* Give space for the image on the right */
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: flex-start;
-    }
-
-    #imageBags {
-        position: absolute;
-        top: 20px;
-        right: 16px;
-        width: 100px;
+        width: 120px;
         height: 100px;
         margin: 0;
     }
@@ -904,10 +817,7 @@ a {
     }
 
     .product-info2 {
-        justify-content: flex-start; /* Align codes to the left */
-        flex-direction: column; /* Stack codes vertically */
-        align-items: flex-start;
-        gap: 4px; /* Reduced gap between codes */
+        justify-content: center;
     }
 
     .first {
@@ -924,7 +834,6 @@ a {
         padding: 10px;
         justify-content: center;
         align-items: center !important;
-        
     }
 
     .stats-report {
@@ -935,7 +844,6 @@ a {
     .stats-report1 {
         align-self: unset !important;
         width: 100% !important;
-        
     }
 
     .stats-card {
@@ -947,7 +855,7 @@ a {
     }
 
     .map-box-container {
-        height: 500px !important;
+        height: auto !important;
     }
 
     .mapbox-container {
@@ -1016,6 +924,9 @@ a {
     .material-chart2 {
         display: flex;
     }
+    .images-section .popup-image {
+        backdrop-filter: blur(3px); /* Adjust blur for smaller screens */
+    }
 }
 
 /* Nav Responsive */
@@ -1045,4 +956,68 @@ a {
         overflow-x: hidden;
         overflow-y: auto;
     }
+}
+
+.images-section{
+    position: relative;
+}
+
+.images-section .popup-image{
+    position: fixed;
+    top: 0;
+    left: 10px;
+    /* margin-left: 100px; */
+    /* background:black; */
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+
+.images-section .popup-image span{
+    position: absolute;
+    top: 0;
+    right: 100px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #283252;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.images-section .popup-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: 50px;
+    transform: translate(-50%, -50%);
+    border: 5px solid #FFFFFF;
+    border-radius: 5px;
+    width: 500px;
+    object-fit: cover;
+
+} 
+
+.info-section p {
+    text-align: center;
+}
+
+#logo-check {
+    display: inline;
+    margin: -8px auto;
+    width: 107px;
+}
+
+.info-section {
+    height: 50px;
+    display: flex;
+    padding: 0 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    background: #FFF;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04), 0px 2px 2px 0px rgba(0, 0, 0, 0.04), 0px 1px 2px 0px rgba(0, 0, 0, 0.04);
 }

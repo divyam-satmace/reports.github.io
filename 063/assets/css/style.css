@@ -7,10 +7,8 @@
 body {
     min-height: 80vh;
     background-color: #F0F0F0;
-    font-family: 'Urbanist', sans-serif;
-    /* FIX: Added overflow-x: hidden to the body to prevent general horizontal scrolling */
-    width: 100%;
-    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #283252;
 }
 
 /* Navbar */
@@ -36,12 +34,17 @@ body {
     padding: 4px 4px 4px 4px;
 }
 
+#product-icon1{
+    width: 15px;
+    height: 15px;
+}
+
 .nav-button {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    color: #202124;
+    color: #283252;
     font-family: "Urbanist", sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -50,8 +53,8 @@ body {
 }
 
 .nav-button img {
-    width: 100px;
-    height: 50px;
+    width: 120px;
+    height: 24px;
 }
 
 a {
@@ -70,17 +73,15 @@ a {
     align-items: flex-start;
     gap: var(--spacing-3, 24px);
     align-self: stretch;
-    width: 100%;
 }
 
 /* Main Body */
 .main-container {
-    display: flex;
+   display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 24px;
-    width: 100%;
 }
 
 /* Left Part */
@@ -93,14 +94,14 @@ a {
 
 .product-info-container {
     display: flex;
-    height: 400px;
+    height: 416px;
     align-items: flex-start;
     gap: 18px;
 }
 
 .product-img {
     display: flex;
-    padding: 20px 16px;
+    padding: 10px 16px 16px 16px;
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
@@ -111,12 +112,15 @@ a {
 
 #imageBags {
     width: 200px;
-    height: 200px;
-    margin: 40px 0 0 40px;
+    height: 170px;
+    margin: 25px 0 0 40px;
     border-radius: 10px;
 }
 
 .product-info {
+    
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -134,6 +138,8 @@ a {
 
 .product-info2 {
     width: 100%;
+    /* hirh */
+    height: 100px;
     display: flex;
     align-items: flex-start;
     gap: 8px;
@@ -151,6 +157,8 @@ a {
     display: flex;
     width: 146px;
     padding: 16px;
+    /* height */
+    height:100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
@@ -164,6 +172,7 @@ a {
 .company-info1 {
     display: flex;
     width: 300px;
+    height: 93px;
     padding: 13px;
     flex-direction: column;
     align-items: flex-start;
@@ -174,8 +183,12 @@ a {
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.16);
 }
 
+.company-info1 p{
+    padding: 10px;
+}
+
 .product-title {
-    color: var(--grey-raisin-black, #202124);
+    color: var(--grey-raisin-black, #283252);
     font-family: "Urbanist", sans-serif;
     font-size: 20px;
     font-weight: 700;
@@ -183,12 +196,14 @@ a {
 }
 
 #pt-description {
-    align-self: stretch;
-    color: var(--grey-raisin-black, #202124);
+    margin-left: -10px ;
+    color: var(--grey-raisin-black, #283252);
     font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.7px;
+    line-height: 1.5; /* MODIFIED: Set to 1.5 for better spacing */
+    text-align: left; /* MODIFIED: Align text to the right */
 }
 
 /* Stats */
@@ -205,7 +220,7 @@ a {
     align-items: flex-start;
     align-self: stretch;
     border-radius: 16px;
-    border: 1px #4FC7C2;
+    border: 1px solid #4FC7C2;
 }
 
 .stats-report-container {
@@ -309,13 +324,13 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 24px;
 }
 
 .material-flow {
     display: flex;
     width: 650px;
-    height: 400px;
+    height: 440px;
     padding: 16px 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -374,7 +389,7 @@ a {
 /* map-box */
 .map-box-container {
     width: 100%;
-    height: 380px;
+    height: 440px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -486,6 +501,23 @@ a {
     transition: 0.8s ease;
 }
 
+/* #btn1 .btn-click {
+    color: black;
+    background-color: #C3F5EC;
+}
+#btn2 .btn-click {
+    color: white;
+    background-color: #40cf85;
+}
+#btn3 .btn-click {
+    color: white;
+    background-color: #6289ed;
+}
+#btn4 .btn-click {
+    color: white;
+    background-color: #083739;
+} */
+
 .mapbox-container {
     display: block;
     /* width: 640px; */
@@ -541,11 +573,10 @@ a {
     border-radius: 16px;
     background: #FFFFFF;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
-    width: 100%;
 }
 
 .mf-name p {
-    color: #202124;
+    color: #283252;
     font-family: "Urbanist", sans-serif;
     font-size: 22px;
     font-weight: 700;
@@ -637,7 +668,7 @@ a {
 
 .material-flow-chart {
     width: 100%;
-    height: 550px;
+    height: 330px;
 }
 
 #chartdiv {
@@ -653,17 +684,11 @@ a {
 }
 
 /* First/Middle Section Responsive */
-
-@media screen and (max-width: 1200px) {
-    .website-container {
-        padding-left: 100px;
-    }
-}
 @media screen and (min-width: 1200px) {
     .website-container {
-        padding-left: 200px;
+        display: flex;
+        align-items: center;
     }
-
 
     .main-container {
         justify-content: center;
@@ -702,8 +727,7 @@ a {
     }
 
     .image-gallery-container {
-        /* FIX: Changed 105vw to 100% to stop horizontal overflow on desktop */
-        width: 100%;
+        width: 105vw;
         max-width: 1300px;
         display: flex;
         justify-content: flex-start;
@@ -726,113 +750,63 @@ a {
 
 }
 
-/* --- Start of Mobile-specific Rules --- */
+
+
 @media screen and (max-width: 750px) {
     .middle {
         width: 100% !important;
         max-width: 100% !important;
-        gap: 20px;
     }
+
     .website-container {
         justify-content: center;
         padding: 16px;
     }
 
     .product-info-container {
-        /* FIX: Increased height to give space for all content */
+        /* width: 100%; */
         height: auto;
-        padding-bottom: 24px; /* Add some padding to the bottom */
         flex-direction: column;
-        gap: 16px; /* Reduced gap for a tighter look */
     }
 
-    /* FIX: The main card wrapper. Made height dynamic and set position context for image */
-   
-    /* FIX: Product Info Text Container - Set maximum width to avoid overlap with image */
-        .product-info {
-        /* This is the key change: limits the width of the text container
-        to clear the area where the image is absolutely positioned. */
-        max-width: calc(100% - 120px); /* 100px image width + 20px buffer */
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: flex-start;
+    .product-img {
+        height: 15em;
+        align-items: center;
+        justify-content: center;
     }
 
-    /* FIX: Product Info 1 is the Title and Description container. Limit its width. */
-    .product-info1 {
-        /* Inherit the restricted width from .product-info to ensure content is constrained */
+    .product-info {
         width: 100%;
-        height: auto;
-        gap: 4px;
-        justify-content: flex-start;
+        align-items: center;
     }
 
-    /* The container for the item/HSN codes and image */
+    .product-info1 {
+        /* width: 100%; */
+        height: 132px;
+        justify-content: space-around;
+    }
+
     .product-desc-img {
-        display: flex; /* Makes the p#pt-description and img#imageBags align side-by-side (before image is absolute) */
-        /* You might not need to change this if the image is absolute. */
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
     }
 
-    /* The text for item and HSN codes */
     #pt-description {
         letter-spacing: .7px;
         line-height: 1.5rem;
         font-size: 14px;
-        display: block;
-        flex-shrink: 1;
-        min-width: 0;
-        height: auto;
     }
-    
-    /* FIX: Absolute positioned image to the top right */
+
     #imageBags {
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
-        width: 100px; /* Reduced size to take up less space */
-        height: 100px; /* Reduced size to take up less space */
+        width: 120px;
+        height: 100px;
         margin: 0;
     }
-    
-    /* FIX: The overall product card wrapper. Need to make sure it establishes a relative context. */
-    .product-img {
-        position: relative;
-        padding: 20px 16px;
-        width: 100%;
-        height: auto; 
-        min-height: 150px; /* Ensure enough height for the image (100px) + padding */
-        display: flex; /* Maintain flex to structure content correctly */
-        flex-direction: column;
-    }
 
-    
-
-    .product-title {
-        /* Ensure the title text wraps correctly */
-        word-wrap: break-word;
-        max-width: 100%;
-    }
-
-    /* FIX: Absolute positioned image to the top right */
-    
-
-    .product-info2 {
-        justify-content: flex-start; /* Align codes to the left */
-        flex-direction: column; /* Stack codes vertically */
-        align-items: flex-start;
-        gap: 4px; /* Reduced gap between codes */
-    }
-    
-    
-    /* --- General Mobile Layout Reset --- */
-
-    .first {
-        width: 100%;
-        align-items: center;
-    }
-    
     .company-info {
         padding: 20px 16px;
     }
@@ -840,6 +814,15 @@ a {
     .company-info,
     .company-info1 {
         width: 100%;
+    }
+
+    .product-info2 {
+        justify-content: center;
+    }
+
+    .first {
+        width: 100%;
+        align-items: center;
     }
 
     .material-flow {
@@ -851,7 +834,6 @@ a {
         padding: 10px;
         justify-content: center;
         align-items: center !important;
-        
     }
 
     .stats-report {
@@ -862,7 +844,6 @@ a {
     .stats-report1 {
         align-self: unset !important;
         width: 100% !important;
-        
     }
 
     .stats-card {
@@ -874,7 +855,7 @@ a {
     }
 
     .map-box-container {
-        height: 500px !important;
+        height: auto !important;
     }
 
     .mapbox-container {
@@ -943,6 +924,9 @@ a {
     .material-chart2 {
         display: flex;
     }
+    .images-section .popup-image {
+        backdrop-filter: blur(3px); /* Adjust blur for smaller screens */
+    }
 }
 
 /* Nav Responsive */
@@ -972,4 +956,68 @@ a {
         overflow-x: hidden;
         overflow-y: auto;
     }
+}
+
+.images-section{
+    position: relative;
+}
+
+.images-section .popup-image{
+    position: fixed;
+    top: 0;
+    left: 10px;
+    /* margin-left: 100px; */
+    /* background:black; */
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+
+.images-section .popup-image span{
+    position: absolute;
+    top: 0;
+    right: 100px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #283252;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.images-section .popup-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: 50px;
+    transform: translate(-50%, -50%);
+    border: 5px solid #FFFFFF;
+    border-radius: 5px;
+    width: 500px;
+    object-fit: cover;
+
+} 
+
+.info-section p {
+    text-align: center;
+}
+
+#logo-check {
+    display: inline;
+    margin: -8px auto;
+    width: 107px;
+}
+
+.info-section {
+    height: 50px;
+    display: flex;
+    padding: 0 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    background: #FFF;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04), 0px 2px 2px 0px rgba(0, 0, 0, 0.04), 0px 1px 2px 0px rgba(0, 0, 0, 0.04);
 }

@@ -105,6 +105,7 @@ a {
 }
 
 #imageBags {
+    /* Base styles for desktop/large screen */
     width: 200px;
     height: 200px;
     margin: 40px 0 0 40px;
@@ -118,7 +119,8 @@ a {
     gap: 14px;
 }
 
-.product-info1 {
+/* Updated product-info1 to product-text-info for clarity on the content */
+.product-text-info { 
     width: 300px;
     height: 83px;
     display: flex;
@@ -756,6 +758,7 @@ a {
     }
 
     .product-img {
+        /* We want the product-img container to be vertically aligned and centered on mobile */
         align-items: center;
         justify-content: center;
     }
@@ -765,10 +768,12 @@ a {
         align-items: center;
     }
 
-    .product-info1 {
+    /* Keep the product text info left-aligned for these larger mobile breakpoints */
+    .product-text-info {
         width: 100%;
         height: 132px;
         justify-content: space-around;
+        align-items: flex-start; /* Keep text left-aligned */
     }
 
     .product-desc-img {
@@ -786,10 +791,11 @@ a {
         font-size: 14px;
     }
 
+    /* Target the specific image ID for this breakpoint to remove desktop margins/dimensions */
     #imageBags {
-        /* width: 150px; */
-        height: 100px;
-        margin: 0;
+        width: 150px; /* Adjust size if needed, but keep it constrained */
+        height: 100px; /* Adjust size if needed, but keep it constrained */
+        margin: 0; /* Remove desktop margin */
     }
 
     .company-info {
@@ -943,22 +949,52 @@ a {
 
     .product-img {
         display: flex;
-        flex-direction: column;
-        justify-content: center; /* centers vertically inside container */
-        align-items: center;     /* centers horizontally */
-        padding: 50px 20px;
-        width: 100%;             /* stretch full width if needed */
+        /* Change to row so text and image are side-by-side */
+        flex-direction: row; 
+        /* Use space-between to push the two children (text and image) to the edges */
+        justify-content: space-between; 
+        align-items: flex-start; /* Align vertically to the top */
+        padding: 20px 16px; /* Restore standard padding */
+        width: 100%;
+        height: auto; 
+        min-height: 100px;
         border-radius: 16px;
         background: #FFFFFF;
         box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.16);
     }
 
-    .product-img img {
-        max-width: 100%;         /* image scales with container */
-        height: 1000px;
-        display: block;
-        margin: 0 auto;          /* ensure image is centered */
+    .product-text-info {
+        /* Ensure text takes up space and aligns left */
+        width: 60%;
+        height: auto; 
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
+    .product-desc-img {
+        /* Ensure the image container aligns the image to the right */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Pushes the image to the right of its container */
+        width: 40%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* CRITICAL FIX: Target the specific image to ensure it doesn't stretch and aligns right */
+    #imageBags {
+        width: 100px; /* Smaller, non-stretching size */
+        height: 100px;
+        margin: 0; /* Clear any conflicting margins */
+        object-fit: contain; /* Ensure the image fits within its box without stretching its content */
+        /* align-self: flex-end; - Not needed now, the parent .product-desc-img handles it */
+    }
 
+    .product-img img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+    }
 }
