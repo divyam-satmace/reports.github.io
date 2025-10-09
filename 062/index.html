@@ -37,20 +37,17 @@
 
   <style>
     .nav-button img {
-    width: 120px;
-    height: 50px;
+        width: 98px;
+        height: auto;
     }
     body {
-    min-height: 80vh;
-    background-color: #F0F0F0;
-    font-family: 'Urbanist', sans-serif;
+        min-height: 80vh;
+        background-color: #F0F0F0;
+        font-family: 'Urbanist', sans-serif;
     }
     .nav-item img {
-    width: 115px;
-    height: 50px;
-    }
-    .material-flow{
-        height: 500px;
+        width: 124px;
+        height: auto;
     }
 
     @media screen and (max-width: 750px) {
@@ -60,18 +57,14 @@
             justify-content: center;
             height: 250px;
         }
-        .map-box-container {
-            height: 550px !important;
-        }
-
     }
     .stats-report1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
-    border-radius: 16px;
-    border: 1px  #4FC7C2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        border-radius: 16px;
+        border: 1px  #4FC7C2;
     }
 
   </style>
@@ -85,7 +78,6 @@
         </div>
 
         <div class="satma-nav">
-            
                 <div class="nav-button">
                     Traceability & Impact Report
                     <img src="assets\images\vartullogo.png" alt="Plastic Bags">
@@ -98,6 +90,7 @@
         <div class="main-container">
             <div class="first">
                 <div class="product-info-container">
+                    <!-- Product Title with Image, item and HSN code -->
                     <div class="product-img">
                         <div class="product-info1">
                             <div class="product-title">
@@ -105,17 +98,18 @@
                                     id="pt-company"></span>
                             </div>
                             <div class="product-desc-img">
-                                <p id="pt-description"> <img src="assets\images\product-icon1.svg" alt=""
-                                        id="product-icon1"> Item code : <span id="pt-bg">WTR001</span> <br>
-                                        <br>
-                                        <img src="assets\images\product-icon3.svg" alt=""
-                                        id="product-icon1"> HSN code :  <span id="pt-bg">39232100</span>
-                                 </p>
-                                <img src="assets\images\CROCS.jpg" alt="Plastic Bags" id="imageBags">
+                                <p id="pt-description"> 
+                                    Item code : <span id="pt-bg">WTR001</span> <br>
+                                    <br>
+                                    HSN code :  <span id="pt-bg">39232100</span>
+                                </p>
+                                <img src="assets\images\Crocs.jpg" alt="Plastic Bags" id="imageBags">
                             </div>
                         </div>
                     </div>
+                    <!-- Product title END-->
 
+                    <!-- Impact Number -->
                     <div class="stats-report-container mobile-stats-report1">
                         <div class="mf-name">
                             <p>Impact Numbers</p>
@@ -181,7 +175,9 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Impact Number END-->
 
+                    <!-- Product Info like Invoice number, date, quantity, certification, billed to and PO number -->
                     <div class="product-info">
                         <div class="product-info2">
                             <div class="company-info">
@@ -212,6 +208,7 @@
                             <p>P.O Number<b> <br> 4515160888</b> </p>
                         </div>
                     </div>
+                    <!-- Product info END -->
                 </div>
 
                 <div class="material-flow material-chart1">
@@ -381,7 +378,18 @@
                     <img src="../all-images/9.jpg" alt="collection-1" class="imageGallery">
                     <p>Aug 03, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 414111 </p>
                 </div>
-               
+                <div class="image-content">
+                    <img src="../all-images/image_2w1.png" alt="collection-1" class="imageGallery">
+                    <p>Aug 03, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 414111 </p>
+                </div>
+                <div class="image-content">
+                    <img src="../all-images/image_2w2.png" alt="collection-1" class="imageGallery">
+                    <p>Aug 03, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 414111 </p>
+                </div>
+                <div class="image-content">
+                    <img src="../all-images/image_6w3.png" alt="collection-1" class="imageGallery">
+                    <p>Aug 03, 2025 &nbsp;&nbsp;&nbsp;<img src="assets\images\location-icon.svg" alt=""> 414111 </p>
+                </div>
             </div>
         </div>
     </div>
