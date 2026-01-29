@@ -1,0 +1,10 @@
+.expand-btn button {
+    width: 110px !important;
+}
+.map-container, .mapbox-container {
+    width: 100% !important;
+    height: 90vh !important;
+}
+.map-box-container {
+    height: auto;
+}
